@@ -3,4 +3,4 @@
 *.log
 *.suo
 /LegoBlazor/_ReSharper.Caches/
-LegoBlazor/.vs/LegoBlazor/v16/.suo
+/LegoBlazor/obj/
