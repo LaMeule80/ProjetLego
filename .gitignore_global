@@ -1,8 +1,0 @@
-
-*.sst
-*.log
-*.suo
-*.user
-/LegoBlazor/LegoBlazor/_ReSharper.Caches/
-/LegoBlazor/LegoBlazor/obj/
-/LegoBlazor/.vs/
