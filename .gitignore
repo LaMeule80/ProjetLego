@@ -2,5 +2,5 @@
 *.sst
 *.log
 *.suo
-/LegoBlazor/_ReSharper.Caches/
-/LegoBlazor/obj/
+/LegoBlazor/LegoBlazor/_ReSharper.Caches/
+/LegoBlazor/LegoBlazor/obj/
