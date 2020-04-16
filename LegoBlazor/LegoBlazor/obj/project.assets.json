@@ -796,11 +796,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JerômeMUSQUA\\source\\Workspaces\\Projet ASP\\LegoBlazor\\LegoBlazor\\LegoBlazor.csproj",
+      "projectUniqueName": "C:\\_Temp\\GIT\\ProjetLego\\LegoBlazor\\LegoBlazor\\LegoBlazor.csproj",
       "projectName": "LegoBlazor",
-      "projectPath": "C:\\Users\\JerômeMUSQUA\\source\\Workspaces\\Projet ASP\\LegoBlazor\\LegoBlazor\\LegoBlazor.csproj",
+      "projectPath": "C:\\_Temp\\GIT\\ProjetLego\\LegoBlazor\\LegoBlazor\\LegoBlazor.csproj",
       "packagesPath": "C:\\Users\\JerômeMUSQUA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JerômeMUSQUA\\source\\Workspaces\\Projet ASP\\LegoBlazor\\LegoBlazor\\obj\\",
+      "outputPath": "C:\\_Temp\\GIT\\ProjetLego\\LegoBlazor\\LegoBlazor\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

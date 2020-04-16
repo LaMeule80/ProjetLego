@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qXcToAjI+3dRApjpYpYtfvEEga0rbUdvJdkxzmS7SM4KLtDach/+ZczaeUvID+9qdg0f5jT80OAkC+WTqwem1A==",
+  "dgSpecHash": "20X5E3RddBsnH5HjutVdQ3ontEMYIjLL8eZXj2WjGFMn7Z3mDi9RIgnUEJxswFg3nNsmoZPevqLIHaQ39Rc2eQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\JerômeMUSQUA\\source\\Workspaces\\Projet ASP\\LegoBlazor\\LegoBlazor\\LegoBlazor.csproj",
+  "projectFilePath": "C:\\_Temp\\GIT\\ProjetLego\\LegoBlazor\\LegoBlazor\\LegoBlazor.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JerômeMUSQUA\\.nuget\\packages\\blazorise\\0.8.8.4\\blazorise.0.8.8.4.nupkg.sha512",
     "C:\\Users\\JerômeMUSQUA\\.nuget\\packages\\blazorise.bootstrap\\0.8.8.4\\blazorise.bootstrap.0.8.8.4.nupkg.sha512",
