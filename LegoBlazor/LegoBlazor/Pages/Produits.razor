@@ -1,0 +1,28 @@
+﻿@page "/produits"
+
+@using LegoBlazor.Controls
+@using LegoBlazor.Data
+@using Radzen
+@using Radzen.Blazor
+@inject ProduitService ProduitService
+@inherits ProduitsPages
+
+<h1>Lego Technic</h1>
+
+<p>Listes :</p>
+
+@if (Items == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    @foreach (var item in Items)
+    {
+        <ProduitControl Value="@item" />
+    } 
+}
+
+@code {
+
+}
