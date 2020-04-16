@@ -1,15 +1,8 @@
 ﻿@page "/produits"
-
-@using LegoBlazor.Controls
 @using LegoBlazor.Data
-@using Radzen
-@using Radzen.Blazor
-@inject ProduitService ProduitService
-@inherits ProduitsPages
+@inherits ProduitsPagesV2
 
-<h1>Lego Technic</h1>
-
-<p>Listes :</p>
+<h1>Sets</h1>
 
 @if (Items == null)
 {
@@ -17,12 +10,41 @@
 }
 else
 {
-    @foreach (var item in Items)
-    {
-        <ProduitControl Value="@item" />
-    } 
+    <Row>
+        <DataGrid TItem="Set"
+                  Data="@Items"
+                  Editable="true"
+                  Sortable="true"
+                  Filterable="true"
+                  PageSize="10"
+                  UseInternalEditing="true"
+                  @bind-SelectedRow="@selected"
+                  IsStriped="true"
+                  IsBordered="true"
+                  IsHoverable="true">
+            <ChildContent>
+                <DataGridColumn TItem="Set" Field="@nameof(Set.SetNum)" Caption="Numéro" Sortable="false" />
+                <DataGridColumn TItem="Set" Field="@nameof(Set.Name)" Caption="Name" Sortable="false" />
+                <DataGridColumn TItem="Set" Field="@nameof(Set.Year)" Caption="Année" Sortable="false" />
+                <DataGridColumn TItem="Set" Field="@nameof(Set.Theme)" Caption="Thème" Sortable="false" />
+            </ChildContent>
+        </DataGrid>
+    </Row>
+    <Row>
+        <div width="500px" height="150px">
+            <Card>
+                <CardHeader>
+                    <CardTitle>@selected?.Name</CardTitle>
+                    <CardSubtitle></CardSubtitle>
+                </CardHeader>
+                <CardImage Source="@selected?.SetImgUrl?.AbsoluteUri" Alt="Placeholder image" />
+            </Card>
+        </div>
+    </Row>
 }
 
 @code {
+
+    Set selected;
 
 }
