@@ -1,2 +1,5 @@
 /LegoBlazor/_ReSharper.Caches/
 /LegoBlazor/LegoBlazor/obj/
+/LegoBlazor/LegoBlazor/bin/Debug/netcoreapp3.1
+*.suo
+*.v2

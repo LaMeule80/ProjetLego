@@ -1,50 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Components;
+using LegoBlazor.Tools;
 using Newtonsoft.Json;
 
 namespace LegoBlazor.Data
 {
-    public abstract class Pages<T> : ModelControl<T>
-    {
-        public IEnumerable<T> Items { get; set; }
-
-        protected override async Task OnInitializedAsync()
-        {
-            await base.OnInitializedAsync();
-            await Load();
-        }
-
-        protected async Task Load()
-        {
-            Items = GetItems().Result;
-        }
-
-        public abstract Task<IEnumerable<T>> GetItems();
-    }
-
-    public class ModelControl<T> : ComponentBase, IDisposable
-    {
-        [Parameter]
-        public T Value { get; set; }
-
-        public void Dispose()
-        {
-        }
-    }
-
-    public class ProduitsPages : Pages<Produit>
-    {
-        public override Task<IEnumerable<Produit>> GetItems()
-        {
-            return new ProduitService().GetItems();
-        }
-    }
-
     public class ProduitsPagesV2 : Pages<Set>
     {
         private IEnumerable<ThemeJson> _themes;
