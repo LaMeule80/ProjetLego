@@ -1,6 +1,7 @@
-﻿@page "/produits/"
+﻿@page "/themes/"
 @using LegoBlazor.Data
-@inherits SetsPages
+@using Theme = LegoBlazor.Data.Theme
+@inherits ThemesPages
 
 <h1>Sets</h1>
 
@@ -11,7 +12,7 @@
 else
 {
     <Row>
-        <DataGrid TItem="Set"
+        <DataGrid TItem="Theme"
                   Data="@Items"
                   Editable="true"
                   Sortable="true"
@@ -23,13 +24,10 @@ else
                   Bordered="true"
                   Hoverable="true">
             <ChildContent>
-                <DataGridColumn TItem="Set" Field="@nameof(Data.Set.SetNum)" Caption="Numéro" Sortable="false" />
-                <DataGridColumn TItem="Set" Field="@nameof(Data.Set.Name)" Caption="Name" Sortable="false" />
-                <DataGridColumn TItem="Set" Field="@nameof(Data.Set.Year)" Caption="Année" Sortable="false" />
-                <DataGridColumn TItem="Set" Field="@nameof(Data.Set.Theme)" Caption="Thème" Sortable="false" />
-                <DataGridColumn TItem="Set" Field="@nameof(Data.Set.Id)" Caption="*">
+                <DataGridColumn TItem="Theme" Field="@nameof(Theme.Name)" Caption="Name" Sortable="false" />
+                <DataGridColumn TItem="Theme" Field="@nameof(Theme.Id)" Caption="*">
                     <DisplayTemplate>
-                        <Button Color="Color.Primary" Clicked="@(()=>NavClicked())">Voir</Button>
+                        <Button Color="Color.Primary" Clicked="@(()=>NavClicked())">Voir les sets</Button>
                     </DisplayTemplate>
                 </DataGridColumn>
             </ChildContent>
@@ -39,7 +37,7 @@ else
 
 @code {
 
-    Data.Set selected;
+    Theme selected;
 
     void NavClicked()
     {

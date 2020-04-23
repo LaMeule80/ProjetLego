@@ -2,7 +2,7 @@
 
 namespace LegoBlazor.Data
 {
-    public class ProduitPage : Page<Set>
+    public class SetPage : Page<Set>
     {
         public override Set GetItem()
         {

@@ -5,24 +5,6 @@ using Microsoft.JSInterop;
 
 namespace LegoBlazor.Tools
 {
-    public class ModelControl<T> : ComponentBase, IDisposable where T : IBase   
-    {
-        [Parameter]
-        public T Value { get; set; }
-
-        public void Dispose()
-        {
-        }
-    }
-
-    public interface IBase
-    {
-        int Id { get; }
-    }
-
-
-
-
     public abstract class Page<T> : ComponentBase where T : class
     {
         [Inject]

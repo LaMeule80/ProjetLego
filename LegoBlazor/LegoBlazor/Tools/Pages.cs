@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Components;
 
 namespace LegoBlazor.Tools
 {
@@ -16,24 +14,5 @@ namespace LegoBlazor.Tools
         }
 
         public abstract IEnumerable<T> GetItems();
-    }
-
-    public class Base : ComponentBase, IDisposable
-    {
-        [Inject]
-        protected NavigationManager NavigationManager { get; set; }
-
-        protected bool Disposed { get; set; }
-
-        public void Dispose()
-        {
-            Disposed = true;
-            InternalDispose();
-        }
-
-        protected virtual void InternalDispose()
-        {
-            //NP
-        }
     }
 }
