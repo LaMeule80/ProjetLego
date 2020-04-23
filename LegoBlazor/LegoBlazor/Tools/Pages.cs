@@ -1,24 +1,39 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 
 namespace LegoBlazor.Tools
 {
-    public abstract class Pages<T> : ComponentBase
+    public abstract class Pages<T> : Base where T : class
     {
         public IEnumerable<T> Items { get; set; }
 
-        protected override async Task OnInitializedAsync()
+        protected override Task OnInitializedAsync()
         {
-            await base.OnInitializedAsync();
-            await Load();
+            Items = GetItems();
+            return Task.CompletedTask;
         }
 
-        protected async Task Load()
+        public abstract IEnumerable<T> GetItems();
+    }
+
+    public class Base : ComponentBase, IDisposable
+    {
+        [Inject]
+        protected NavigationManager NavigationManager { get; set; }
+
+        protected bool Disposed { get; set; }
+
+        public void Dispose()
         {
-            Items = GetItems().Result;
+            Disposed = true;
+            InternalDispose();
         }
 
-        public abstract Task<IEnumerable<T>> GetItems();
+        protected virtual void InternalDispose()
+        {
+            //NP
+        }
     }
 }

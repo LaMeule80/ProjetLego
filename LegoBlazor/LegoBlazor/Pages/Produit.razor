@@ -1,0 +1,15 @@
+﻿@page "/produits/{Id:guid}"
+@using LegoBlazor.Data
+@inherits ProduitPage
+
+<h1>Sets</h1>
+
+@if (@Item == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <h1>COUCOU !!!!</h1>
+    <h2>@Item.Name</h2>
+}

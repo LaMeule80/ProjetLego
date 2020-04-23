@@ -2,7 +2,7 @@
 
 namespace LegoBlazor.Data
 {
-    public class Produit : IBase
+    public class Produit
     {
         public Produit(
             int id,
@@ -25,8 +25,6 @@ namespace LegoBlazor.Data
         public string Nom { get; set; }
 
         public int NombrePieces { get; set; }
-
-        public string Image => $"images/{Numero}.jpg";
 
         public int Etat { get; set; }
     }

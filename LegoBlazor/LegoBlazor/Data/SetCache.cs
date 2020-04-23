@@ -1,30 +1,41 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
-using LegoBlazor.Tools;
 using Newtonsoft.Json;
 
 namespace LegoBlazor.Data
 {
-    public class ProduitsPagesV2 : Pages<Set>
+    public static class SetCache
     {
-        private IEnumerable<ThemeJson> _themes;
-        private IEnumerable<SetJson> _sets;
+        private static Dictionary<Guid, Set> _values = new Dictionary<Guid, Set>();
 
-        public ProduitsPagesV2()
+        static SetCache()
         {
-            _themes = Themes();
-            _sets = Sets();
+            Load();
         }
 
-        public override Task<IEnumerable<Set>> GetItems()
+        private static void Load()
         {
-            var sets = _sets.Select(x => new Set(x, _themes));
-            return Task.FromResult(sets);
+            var theme = Themes();
+            var set = Sets();
+
+            foreach (var item in set)
+            {
+                var key = Guid.NewGuid();
+                var t = new Tuple<Guid, Set>(key, new Set(key, item, theme));
+                _values.Add(key, t.Item2);
+            }
         }
 
-        public IEnumerable<ThemeJson> Themes()
+        public static IEnumerable<Set> Values => _values.Select(x => x.Value);
+
+        public static Set GetValue(Guid key)
+        {
+            return _values[key];
+        }
+
+        public static IEnumerable<ThemeJson> Themes()
         {
             List<ThemeJson> result;
             var file = Path.Combine(Directory.GetCurrentDirectory(), "Data", "Themes.json");
@@ -37,7 +48,7 @@ namespace LegoBlazor.Data
             return result;
         }
 
-        public IEnumerable<SetJson> Sets()
+        public static IEnumerable<SetJson> Sets()
         {
             List<SetJson> result;
             var file = Path.Combine(Directory.GetCurrentDirectory(), "Data", "Sets.json");

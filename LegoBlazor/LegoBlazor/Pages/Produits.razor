@@ -1,6 +1,6 @@
-﻿@page "/produits"
+﻿@page "/produits/"
 @using LegoBlazor.Data
-@inherits ProduitsPagesV2
+@inherits ProduitsPages
 
 <h1>Sets</h1>
 
@@ -27,24 +27,24 @@ else
                 <DataGridColumn TItem="Set" Field="@nameof(Set.Name)" Caption="Name" Sortable="false" />
                 <DataGridColumn TItem="Set" Field="@nameof(Set.Year)" Caption="Année" Sortable="false" />
                 <DataGridColumn TItem="Set" Field="@nameof(Set.Theme)" Caption="Thème" Sortable="false" />
+                <DataGridColumn TItem="Set" Field="@nameof(Set.Id)" Caption="*">
+                    <DisplayTemplate>
+                        <Button Color="Color.Primary" Clicked="@(()=>NavClicked())">Voir</Button>
+                    </DisplayTemplate>
+                </DataGridColumn>
             </ChildContent>
         </DataGrid>
-    </Row>
-    <Row>
-        <div width="500px" height="150px">
-            <Card>
-                <CardHeader>
-                    <CardTitle>@selected?.Name</CardTitle>
-                    <CardSubtitle></CardSubtitle>
-                </CardHeader>
-                <CardImage Source="@selected?.SetImgUrl?.AbsoluteUri" Alt="Placeholder image" />
-            </Card>
-        </div>
     </Row>
 }
 
 @code {
 
     Set selected;
+
+    void NavClicked()
+    {
+        if (selected != null)
+            NavigationManager.NavigateTo(selected.Uri, true);
+    }
 
 }
