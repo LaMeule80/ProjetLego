@@ -5,12 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Blazorise.DataGrid" Version="0.8.8.4" />
-    <PackageReference Include="Blazorise.Icons.Material" Version="0.8.8.4" />
-    <PackageReference Include="Blazorise.Material" Version="0.8.8.4" />
-    <PackageReference Include="Blazorise.Sidebar" Version="0.8.8.4" />
+    <PackageReference Include="Blazorise.DataGrid" Version="0.9.0" />
+    <PackageReference Include="Blazorise.Icons.Material" Version="0.9.0" />
+    <PackageReference Include="Blazorise.Material" Version="0.9.0" />
+    <PackageReference Include="Blazorise.Sidebar" Version="0.9.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="Radzen.Blazor" Version="2.5.8" />
   </ItemGroup>
 
 </Project>
