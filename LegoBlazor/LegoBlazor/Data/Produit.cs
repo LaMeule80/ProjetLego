@@ -1,10 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using LegoBlazor.Tools;
 
 namespace LegoBlazor.Data
 {
-    public class Produit
+    public class Produit : IBase
     {
         public Produit(
             int id,
