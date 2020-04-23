@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Components;
 
 namespace LegoBlazor.Tools
 {
-    public abstract class Pages<T> : ModelControl<T>
+    public abstract class Pages<T> : ComponentBase
     {
         public IEnumerable<T> Items { get; set; }
 

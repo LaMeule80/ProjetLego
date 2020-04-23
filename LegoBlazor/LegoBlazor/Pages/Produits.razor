@@ -19,9 +19,9 @@ else
                   PageSize="10"
                   UseInternalEditing="true"
                   @bind-SelectedRow="@selected"
-                  IsStriped="true"
-                  IsBordered="true"
-                  IsHoverable="true">
+                  Striped="true"
+                  Bordered="true"
+                  Hoverable="true">
             <ChildContent>
                 <DataGridColumn TItem="Set" Field="@nameof(Set.SetNum)" Caption="Numéro" Sortable="false" />
                 <DataGridColumn TItem="Set" Field="@nameof(Set.Name)" Caption="Name" Sortable="false" />
