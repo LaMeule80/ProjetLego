@@ -33,9 +33,7 @@ namespace LegoBlazor
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<ProduitService>();
-
-
+            
             services
                 .AddBlazorise(options =>
                 {
