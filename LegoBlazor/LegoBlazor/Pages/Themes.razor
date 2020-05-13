@@ -19,7 +19,7 @@ else
                   Filterable="true"
                   PageSize="10"
                   UseInternalEditing="true"
-                  @bind-SelectedRow="@CurrentItem"
+                  @bind-SelectedRow="@selected"
                   Striped="true"
                   Bordered="true"
                   Hoverable="true">
@@ -37,9 +37,12 @@ else
 
 @code {
 
+    Theme selected;
+
     void NavClicked()
     {
-        //TODO
+        if (selected != null)
+            NavigationManager.NavigateTo(selected.Uri, true);
     }
 
 }

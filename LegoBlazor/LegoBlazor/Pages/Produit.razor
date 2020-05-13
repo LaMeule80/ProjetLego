@@ -3,12 +3,6 @@
 @using LegoBlazor.Tools
 @inherits SetPage
 
-<style>
-    img {
-        width: 20%;
-    }
-</style>
-
 <h1>Set : @Item.Name</h1>
 <Row>
     <Fields>
@@ -36,10 +30,10 @@
 </Row>
 <Row>
     <Button Color="Color.Primary" Clicked="@(()=>NavClickedToSite())">Voir sur Rebrickable</Button>
-    <Button Color="Color.Info" Clicked="@(()=>VoirLesPieces())">Voir les pièces</Button>
+    <Button Color="Color.Link" Clicked="@(()=>VoirLesPieces())">Voir les pièces</Button>
 </Row>
 <Row>
-    <img src="@Item.SetImgUrl"/>
+    <img src="@Item.SetImgUrl" style="width:500px;height:600px;" />
 </Row>
 
 @code {
