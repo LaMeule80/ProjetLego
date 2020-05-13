@@ -7,6 +7,8 @@ namespace LegoBlazor.Tools
     {
         public IEnumerable<T> Items { get; set; }
 
+        public T CurrentItem { get; set; }
+
         protected override Task OnInitializedAsync()
         {
             Items = GetItems();
