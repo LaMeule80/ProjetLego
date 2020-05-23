@@ -1,0 +1,23 @@
+﻿using System;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
+
+namespace ApplicationActrice.Tools
+{
+    public abstract class Page<T> : Base where T : class
+    {
+        [Parameter]
+        public Guid Id { get; set; }
+
+        public T Item { get; set; }
+
+        protected override Task OnInitializedAsync()
+        {
+            Item = GetItem();
+            return Task.CompletedTask;
+        }
+
+        public abstract T GetItem();
+    }
+}

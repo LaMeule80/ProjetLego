@@ -2,9 +2,9 @@
 using System.Threading.Tasks;
 using Microsoft.JSInterop;
 
-namespace LegoBlazor.Tools
+namespace ApplicationActrice.Tools
 {
-    public static class IJavaScriptRuntimeExtension
+    public static class IjsRuntimeExtension
     {
         public static async Task AfficherNouvelOnglet(this IJSRuntime jsRuntime, string url)
         {

@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestUnitaires", "TestUnitai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegoAPITest", "LegoAPITest\LegoAPITest.csproj", "{61AAB630-F189-4E96-9BAB-9E6BE1AA33BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutilsBlazor", "OutilsBlazor\OutilsBlazor.csproj", "{ABBCBBB3-1738-4721-9402-12630217145B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{61AAB630-F189-4E96-9BAB-9E6BE1AA33BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61AAB630-F189-4E96-9BAB-9E6BE1AA33BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61AAB630-F189-4E96-9BAB-9E6BE1AA33BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABBCBBB3-1738-4721-9402-12630217145B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABBCBBB3-1738-4721-9402-12630217145B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABBCBBB3-1738-4721-9402-12630217145B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABBCBBB3-1738-4721-9402-12630217145B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
