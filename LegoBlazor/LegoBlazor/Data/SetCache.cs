@@ -18,14 +18,16 @@ namespace LegoBlazor.Data
 
         private static void Load()
         {
-            var theme = Themes();
             var set = Sets();
 
             foreach (var item in set)
             {
-                var key = Guid.NewGuid();
-                var t = new Tuple<Guid, Set>(key, new Set(key, item, theme));
-                _values.Add(key, t.Item2);
+                if (item.ThemeId == 1)
+                {
+                    var key = Guid.NewGuid();
+                    var t = new Tuple<Guid, Set>(key, new Set(key, item));
+                    _values.Add(key, t.Item2);
+                }
             }
         }
 
@@ -34,19 +36,6 @@ namespace LegoBlazor.Data
         public static Set GetValue(Guid key)
         {
             return _values[key];
-        }
-
-        public static IEnumerable<ThemeJson> Themes()
-        {
-            List<ThemeJson> result;
-            var file = Path.Combine(Directory.GetCurrentDirectory(), "Data", "Themes.json");
-            using (StreamReader r = new StreamReader(file))
-            {
-                string json = r.ReadToEnd();
-                result = JsonConvert.DeserializeObject<List<ThemeJson>>(json);
-            }
-
-            return result;
         }
 
         public static IEnumerable<SetJson> Sets()

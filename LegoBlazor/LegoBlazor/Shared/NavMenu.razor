@@ -1,39 +1,25 @@
-﻿<Sidebar @ref="sidebar">
-    <SidebarContent>
-        <SidebarBrand>
-            <a href="">Blazorise" Demo</a>
-        </SidebarBrand>
-        <SidebarNavigation>
-            <SidebarLabel>Main</SidebarLabel>
-            <SidebarItem>
-                <SidebarLink Toggled="(isOpen)=> sidebarSubItemTests.Toggle(isOpen)" IsShow="true">
-                    <Icon Name="IconName.Edit" Margin="Margin.Is3.FromRight" />Pages
-                </SidebarLink>
-                <SidebarSubItem @ref="sidebarSubItemTests" IsShow="true">
-                    <SidebarItem>
-                        <SidebarLink To="produits">Sets</SidebarLink>
-                    </SidebarItem>
-                    <SidebarItem>
-                        <SidebarLink To="themes">Themes</SidebarLink>
-                    </SidebarItem>
-                </SidebarSubItem>
-            </SidebarItem>
-        </SidebarNavigation>
-    </SidebarContent>
-</Sidebar>
+﻿<Sidebar Data="@sidebarInfo" />
 
-@code {
-
+@code{
     Sidebar sidebar;
-    SidebarSubItem sidebarSubItemTests;
-    SidebarSubItem sidebarSubItemApps;
 
-    private bool collapseNavMenu = true;
-
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
+    SidebarInfo sidebarInfo = new SidebarInfo
     {
-        collapseNavMenu = !collapseNavMenu;
-    }
+        Brand = new SidebarBrandInfo
+        {
+            Text = "LEGO"
+        },
+        Items = new List<SidebarItemInfo>
+{
+            new SidebarItemInfo
+            {
+                Text = "Technic",
+                SubItems = new List<SidebarItemInfo>
+{
+                    new SidebarItemInfo { To = "sets/2020", Text = "2020" },
+                    new SidebarItemInfo { To = "sets/2019", Text = "2019" }
+}
+            }
+        }
+    };
 }

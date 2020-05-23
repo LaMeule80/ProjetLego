@@ -1,6 +1,7 @@
-﻿using LegoBlazor.Tools;
+﻿using LegoBlazor.Data;
+using LegoBlazor.Tools;
 
-namespace LegoBlazor.Data
+namespace LegoBlazor.Modeles
 {
     public class SetPage : Page<Set>
     {

@@ -1,6 +1,6 @@
-﻿@page "/produits/"
+﻿@page "/sets/{Year:int}"
 @using LegoBlazor.Data
-@inherits SetsPages
+@inherits LegoBlazor.Modeles.SetsPages
 
 <h1>Sets</h1>
 
@@ -39,7 +39,6 @@ else
                 <DataGridColumn TItem="Set" Field="@nameof(Set.SetNum)" Caption="Numéro" Sortable="false" />
                 <DataGridColumn TItem="Set" Field="@nameof(Set.Name)" Caption="Name" Sortable="false" />
                 <DataGridColumn TItem="Set" Field="@nameof(Set.Year)" Caption="Année" Sortable="false" />
-                <DataGridColumn TItem="Set" Field="@nameof(Set.Theme)" Caption="Thème" Sortable="false" />
                 <DataGridColumn TItem="Set" Field="@nameof(Set.Id)" Caption="*">
                     <DisplayTemplate>
                         <Button Color="Color.Primary" Clicked="@(()=>NavClicked())">Voir</Button>

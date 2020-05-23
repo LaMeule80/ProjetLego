@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
+using LegoBlazor.Data;
 using LegoBlazor.Tools;
 
-namespace LegoBlazor.Data
+namespace LegoBlazor.Modeles
 {
     public class ThemesPages : Pages<Theme>
     {

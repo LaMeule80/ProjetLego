@@ -6,19 +6,15 @@ namespace LegoBlazor.Data
 {
     public class Set
     {
-        public Set(
-            Guid key,
-            SetJson set,
-            IEnumerable<ThemeJson> themes)
+        public Set(Guid key, SetJson set)
         {
             Id = key;
             NumParts = set.NumParts;
             SetNum = set.SetNum;
             Year = set.Year;
             Name = set.Name;
-            var theme = themes.First(x => x.Id == set.ThemeId);
-            ThemeId = theme.Id;
-            Theme = theme.Name;
+            ThemeId = 1;
+            Theme = "Technic";
             SetImgUrl = set.SetImgUrl;
             SetUrl = set.SetUrl;
         }
