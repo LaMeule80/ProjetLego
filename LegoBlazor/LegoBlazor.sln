@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegoBlazor", "LegoBlazor\LegoBlazor.csproj", "{FB239C75-852C-4767-BE8F-201CBBAD2CFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LegoBlazor", "LegoBlazor\LegoBlazor.csproj", "{FB239C75-852C-4767-BE8F-201CBBAD2CFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegoAPI", "LegoAPI\LegoAPI.csproj", "{08B8C926-6D95-4580-8B7A-0261552172FD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestUnitaires", "TestUnitaires", "{C6EEB04A-BAD7-4BD3-A0C8-8C7EF7BB8E15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegoAPITest", "LegoAPITest\LegoAPITest.csproj", "{61AAB630-F189-4E96-9BAB-9E6BE1AA33BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +21,20 @@ Global
 		{FB239C75-852C-4767-BE8F-201CBBAD2CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB239C75-852C-4767-BE8F-201CBBAD2CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB239C75-852C-4767-BE8F-201CBBAD2CFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08B8C926-6D95-4580-8B7A-0261552172FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08B8C926-6D95-4580-8B7A-0261552172FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08B8C926-6D95-4580-8B7A-0261552172FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08B8C926-6D95-4580-8B7A-0261552172FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61AAB630-F189-4E96-9BAB-9E6BE1AA33BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61AAB630-F189-4E96-9BAB-9E6BE1AA33BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61AAB630-F189-4E96-9BAB-9E6BE1AA33BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61AAB630-F189-4E96-9BAB-9E6BE1AA33BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{61AAB630-F189-4E96-9BAB-9E6BE1AA33BA} = {C6EEB04A-BAD7-4BD3-A0C8-8C7EF7BB8E15}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {56DCFB01-3154-4A48-8E81-8DB595BB3845}
