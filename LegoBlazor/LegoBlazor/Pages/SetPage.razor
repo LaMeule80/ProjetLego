@@ -1,6 +1,6 @@
 ﻿@page "/produits/{Id:guid}"
 @using LegoBlazor.Data
-@using LegoBlazor.Tools
+@using OutilsBlazor;
 @inherits LegoBlazor.Modeles.SetPage
 
 <style>
@@ -39,7 +39,7 @@
     <Button Color="Color.Info" Clicked="@(()=>VoirLesPieces())">Voir les pièces</Button>
 </Row>
 <Row>
-    <img src="@Item.SetImgUrl"/>
+    <img src="@Item.SetImgUrl" />
 </Row>
 
 @code {
@@ -50,7 +50,7 @@
     }
 
 
-    void VoirLesPieces ()
+    void VoirLesPieces()
     {
         JSRuntime.AfficherNouvelOnglet(Item.SetUrl.AbsoluteUri);
     }

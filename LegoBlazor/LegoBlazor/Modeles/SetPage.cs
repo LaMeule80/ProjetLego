@@ -1,5 +1,5 @@
 ﻿using LegoBlazor.Data;
-using LegoBlazor.Tools;
+using OutilsBlazor;
 
 namespace LegoBlazor.Modeles
 {
