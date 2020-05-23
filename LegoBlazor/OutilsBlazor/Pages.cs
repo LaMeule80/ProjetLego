@@ -3,7 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Blazorise.DataGrid;
 
-namespace ApplicationActrice.Tools
+namespace OutilsBlazor
 {
     public abstract class Pages<T> : Base where T : IEntity
     {

@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.JSInterop;
 
-namespace ApplicationActrice.Tools
+namespace OutilsBlazor
 {
     public static class IjsRuntimeExtension
     {

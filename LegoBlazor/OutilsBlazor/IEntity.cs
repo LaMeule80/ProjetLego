@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ApplicationActrice.Tools
+﻿namespace OutilsBlazor
 {
     public interface IEntity
     {

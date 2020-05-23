@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.AspNetCore.Components;
 
-namespace LegoBlazor.Tools
+namespace OutilsBlazor
 {
     public class Base : ComponentBase, IDisposable
     {

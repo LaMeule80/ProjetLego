@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace ApplicationActrice.Tools
+namespace OutilsBlazor
 {
     public class AfficherHelper
     {
@@ -11,9 +11,9 @@ namespace ApplicationActrice.Tools
             {
                 Process.Start("explorer.exe", lien);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-
+                // ignored
             }
         }
 
@@ -23,9 +23,9 @@ namespace ApplicationActrice.Tools
             {
                 Process.Start(new ProcessStartInfo("cmd", $"/c start {lien}") { CreateNoWindow = true });
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-
+                // ignored
             }
         }
     }

@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
-using Microsoft.JSInterop;
 
-namespace ApplicationActrice.Tools
+namespace OutilsBlazor
 {
     public abstract class Page<T> : Base where T : class
     {

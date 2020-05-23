@@ -1,11 +1,16 @@
 ﻿using System;
 using Outils.ObjectResultData;
 
-namespace ApplicationActrice.Tools
+namespace OutilsBlazor
 {
     public class Service : Outils.IService
     {
         public static Service Instance => new Service();
+
+        public Service()
+        {
+            ObjectResult = new ObjectResult();
+        }
 
         public void Erreur(string message)
         {
