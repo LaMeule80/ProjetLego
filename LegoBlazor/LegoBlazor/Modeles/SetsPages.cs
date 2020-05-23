@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using LegoBlazor.Data;
-using LegoBlazor.Tools;
 using Microsoft.AspNetCore.Components;
+using OutilsBlazor;
 
 namespace LegoBlazor.Modeles
 {
@@ -11,9 +11,9 @@ namespace LegoBlazor.Modeles
         [Parameter]
         public int Year { get; set; }
 
-        public override IEnumerable<Set> GetItems()
+        public override List<Set> GetItems()
         {
-            return SetCache.Values.Where(x => x.Year == Year);
+            return SetCache.Values.Where(x => x.Year == Year).ToList();
         }
     }
 }

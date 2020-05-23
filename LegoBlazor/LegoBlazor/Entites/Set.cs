@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using OutilsBlazor;
 
 namespace LegoBlazor.Data
 {
-    public class Set
+    public class Set : IEntity
     {
         public Set(Guid key, SetJson set)
         {
@@ -40,5 +41,22 @@ namespace LegoBlazor.Data
         public string Theme { get; set; }
 
         public string Uri => $"produits/{Id}";
+
+        public string Nom => Name;
+        
+        public void Insert()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
