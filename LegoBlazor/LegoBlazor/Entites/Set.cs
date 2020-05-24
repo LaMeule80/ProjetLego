@@ -8,9 +8,8 @@ namespace LegoBlazor.Data
 {
     public class Set : IEntity
     {
-        public Set(Guid key, SetJson set)
+        public Set(SetJson set)
         {
-            Id = key;
             NumParts = set.NumParts;
             SetNum = set.SetNum;
             Year = set.Year;
@@ -20,8 +19,6 @@ namespace LegoBlazor.Data
             SetImgUrl = set.SetImgUrl;
             SetUrl = set.SetUrl;
         }
-
-        public Guid Id { get; set; }
 
         public string SetNum { get; set; }
 
@@ -41,7 +38,7 @@ namespace LegoBlazor.Data
 
         public string Theme { get; set; }
 
-        public string Uri => $"produits/{Id}";
+        public string Uri => $"produits/{SetNum}";
 
         public string Nom => Name;
         

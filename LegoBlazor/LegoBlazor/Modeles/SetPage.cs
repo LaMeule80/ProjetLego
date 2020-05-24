@@ -1,4 +1,5 @@
-﻿using LegoBlazor.Data;
+﻿using LegoAPI;
+using LegoBlazor.Data;
 using OutilsBlazor;
 
 namespace LegoBlazor.Modeles
@@ -7,7 +8,7 @@ namespace LegoBlazor.Modeles
     {
         public override Set GetItem()
         {
-            return SetCache.GetValue(Id);
+            return new Set(new SetApi().LireSet(SetNum));
         }
     }
 }

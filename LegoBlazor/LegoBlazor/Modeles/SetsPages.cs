@@ -15,7 +15,8 @@ namespace LegoBlazor.Modeles
 
         public override List<Set> GetItems()
         {
-            return SetCache.Values.Where(x => x.Year == Year).ToList();
+            SetApi api = new SetApi();
+            return api.LireSets(Year).Select(x => new Set(x)).ToList();
         }
     }
 }

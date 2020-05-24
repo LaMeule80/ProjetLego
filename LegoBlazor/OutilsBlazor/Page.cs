@@ -7,7 +7,7 @@ namespace OutilsBlazor
     public abstract class Page<T> : Base where T : class
     {
         [Parameter]
-        public Guid Id { get; set; }
+        public string SetNum { get; set; }
 
         public T Item { get; set; }
 
