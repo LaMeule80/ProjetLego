@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using LegoAPI;
 using LegoAPI.Json;
 using Newtonsoft.Json;
 
@@ -23,12 +24,9 @@ namespace LegoBlazor.Data
 
             foreach (var item in set)
             {
-                if (item.ThemeId == 1)
-                {
-                    var key = Guid.NewGuid();
-                    var t = new Tuple<Guid, Set>(key, new Set(key, item));
-                    _values.Add(key, t.Item2);
-                }
+                var key = Guid.NewGuid();
+                var t = new Tuple<Guid, Set>(key, new Set(key, item));
+                _values.Add(key, t.Item2);
             }
         }
 
@@ -39,17 +37,10 @@ namespace LegoBlazor.Data
             return _values[key];
         }
 
-        public static IEnumerable<SetJson> Sets()
+        private static IEnumerable<SetJson> Sets()
         {
-            List<SetJson> result;
-            var file = Path.Combine(Directory.GetCurrentDirectory(), "Data", "Sets.json");
-            using (StreamReader r = new StreamReader(file))
-            {
-                string json = r.ReadToEnd();
-                result = JsonConvert.DeserializeObject<List<SetJson>>(json);
-            }
-
-            return result.AsEnumerable();
+            SetApi api = new SetApi();
+            return api.LireSets(2020);
         }
     }
 }

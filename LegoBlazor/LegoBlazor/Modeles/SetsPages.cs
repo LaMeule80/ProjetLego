@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using LegoAPI;
 using LegoBlazor.Data;
 using Microsoft.AspNetCore.Components;
 using OutilsBlazor;

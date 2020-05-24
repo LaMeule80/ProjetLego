@@ -15,11 +15,12 @@ namespace LegoAPI
 
         public abstract string Uri { get; }
 
-        public string Adresse => $"{UrlBase}/{Uri}/?key={ApiKey}";
+        public string AdresseWithKey => $"{UrlBase}/{Uri}/?key={ApiKey}";
+        
+        public string AdresseWithoutKey => $"{UrlBase}/{Uri}/";
 
-        public TData Get<TData>(List<KeyValuePair<string, object>> param = null) where TData : class, new()
+        public TData Get<TData>(string url, List<KeyValuePair<string, object>> param = null) where TData : class, new()
         {
-            string url = Adresse;
             if (param != null && param.Count > 0)
                 param.ForEach(x => url += $"&{x.Key}={x.Value}");
 

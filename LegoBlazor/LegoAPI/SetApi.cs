@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Reflection;
 using LegoAPI.Json;
 
 namespace LegoAPI
@@ -18,9 +17,16 @@ namespace LegoAPI
             param.Add(new KeyValuePair<string, object>("min_year", yearMin));
             param.Add(new KeyValuePair<string, object>("max_year", yearMax));
 
-            var result = Get<CallResult>(param);
+            var result = Get<CallResult>(AdresseWithKey, param);
 
             return result.Results;
+        }
+
+        public SetJson LireSet(string number)
+        {
+            var adresse = $"{AdresseWithoutKey}{number}/?key={ApiKey}";
+            var result = Get<SetJson>(adresse);
+            return result;
         }
 
         public override string Uri => "sets";

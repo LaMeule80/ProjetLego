@@ -29,6 +29,14 @@ namespace LegoAPITest
         }
 
         [Fact]
+        public void CallApiSetV3()
+        {
+            SetApi setApi = new SetApi();
+            var result = setApi.LireSet("42101-1");
+            Assert.True(result.Name == "Buggy");
+        }
+
+        [Fact]
         public void ParametersV1()
         {
             List<KeyValuePair<string, object>> keys = new List<KeyValuePair<string, object>>();
