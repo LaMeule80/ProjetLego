@@ -348,3 +348,4 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+LegoBlazor/.vs/LegoBlazor/v16/TestStore/0/000.testlog

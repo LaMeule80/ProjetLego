@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using LegoAPI.Json;
 using OutilsBlazor;
 
 namespace LegoBlazor.Data

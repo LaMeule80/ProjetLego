@@ -31,7 +31,7 @@ else
                   ShowPager="true"
                   PageSize="10"
                   UseInternalEditing="true"
-                  @bind-SelectedRow="@CurrentItem"
+                  @bind-SelectedRow="@Item"
                   Striped="true"
                   Bordered="true"
                   Hoverable="true">
@@ -56,8 +56,8 @@ else
 
     void NavClicked()
     {
-        if (CurrentItem != null)
-            NavigationManager.NavigateTo(CurrentItem.Uri, true);
+        if (Item != null)
+            NavigationManager.NavigateTo(Item.Uri, true);
     }
 
 }
