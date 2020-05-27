@@ -27,6 +27,6 @@ namespace LegoAPI.Json
         public Uri SetUrl { get; set; }
 
         [JsonProperty("last_modified_dt")]
-        public DateTimeOffset LastModifiedDt { get; set; }
+        public DateTimeOffset? LastModifiedDt { get; set; }
     }
 }
