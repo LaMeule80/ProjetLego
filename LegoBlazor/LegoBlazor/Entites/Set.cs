@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Blazorise.DataGrid;
+using LegoAPI;
 using LegoAPI.Json;
+using LegoBlazor.Entites;
 using OutilsBlazor;
 
 namespace LegoBlazor.Data
@@ -41,7 +44,22 @@ namespace LegoBlazor.Data
         public string Uri => $"produits/{SetNum}";
 
         public string Nom => Name;
-        
+
+        private List<Parts> _parts;
+
+        public List<Parts> Parts
+        {
+            get
+            {
+                if (_parts == null)
+                {
+                    SetApi api = new SetApi();
+                    _parts = api.LireParts(SetNum).Select(x => new Parts(x)).ToList();
+                }
+                return _parts;
+            }
+        }
+
         public void Insert()
         {
             throw new NotImplementedException();

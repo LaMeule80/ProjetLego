@@ -4,4 +4,9 @@
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::61AAB630-F189-4E96-9BAB-9E6BE1AA33BA::.NETCoreApp,Version=v3.1::LegoAPITest.SetTestUnitaires&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d60ead73_002D09c6_002D4827_002Da661_002D8ce6b062cd72/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CallApiPartV1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::61AAB630-F189-4E96-9BAB-9E6BE1AA33BA::.NETCoreApp,Version=v3.1::LegoAPITest.SetTestUnitaires&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
