@@ -4,50 +4,31 @@
 
 <h1>Sets</h1>
 
-@if (Items == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
-    <Row>
-        <Fields>
-            <Field>
-                <FieldLabel>
-                    Numéro :
-                </FieldLabel>
-                <FieldBody>xxx
-                    @Filter
-                </FieldBody>
-            </Field>
-        </Fields>
-    </Row>
-    <Row>
-        <DataGrid TItem="Set"
-                  Data="@Items"
-                  Editable="true"
-                  Sortable="true"
-                  Filterable="true"
-                  ShowPager="true"
-                  PageSize="10"
-                  UseInternalEditing="true"
-                  @bind-SelectedRow="@Item"
-                  Striped="true"
-                  Bordered="true"
-                  Hoverable="true">
-            <ChildContent>
-                <DataGridColumn TItem="Set" Field="@nameof(Set.SetNum)" Caption="Numéro" Sortable="false" />
-                <DataGridColumn TItem="Set" Field="@nameof(Set.Name)" Caption="Name" Sortable="false" />
-                <DataGridColumn TItem="Set" Field="@nameof(Set.Year)" Caption="Année" Sortable="false" />
-                <DataGridColumn TItem="Set" Field="@nameof(Set.SetNum)" Caption="*">
-                    <DisplayTemplate>
-                        <Button Color="Color.Primary" Clicked="@(()=>NavClicked())">Voir</Button>
-                    </DisplayTemplate>
-                </DataGridColumn>
-            </ChildContent>
-        </DataGrid>
-    </Row>
-}
+<Row>
+    <DataGrid TItem="Set"
+              Data="@Items"
+              Editable="true"
+              Sortable="true"
+              Filterable="true"
+              ShowPager="true"
+              PageSize="10"
+              UseInternalEditing="true"
+              @bind-SelectedRow="@Item"
+              Striped="true"
+              Bordered="true"
+              Hoverable="true">
+        <ChildContent>
+            <DataGridColumn TItem="Set" Field="@nameof(Set.SetNum)" Caption="Numéro" Sortable="false" />
+            <DataGridColumn TItem="Set" Field="@nameof(Set.Name)" Caption="Name" Sortable="false" />
+            <DataGridColumn TItem="Set" Field="@nameof(Set.Year)" Caption="Année" Sortable="false" />
+            <DataGridColumn TItem="Set" Field="@nameof(Set.SetNum)" Caption="*">
+                <DisplayTemplate>
+                    <Button Color="Color.Primary" Clicked="@(()=>NavClicked())">Voir</Button>
+                </DisplayTemplate>
+            </DataGridColumn>
+        </ChildContent>
+    </DataGrid>
+</Row>
 
 @code {
 
