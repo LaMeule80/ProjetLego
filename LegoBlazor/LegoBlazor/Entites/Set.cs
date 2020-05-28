@@ -54,11 +54,13 @@ namespace LegoBlazor.Data
                 if (_parts == null)
                 {
                     SetApi api = new SetApi();
-                    _parts = api.LireParts(SetNum).Select(x => new Parts(x)).ToList();
+                    _parts = api.LireParts(SetNum, NumParts).Select(x => new Parts(x)).ToList();
                 }
                 return _parts;
             }
         }
+
+        public List<List<Parts>> PartsSplit => Parts.SplitList();
 
         public void Insert()
         {

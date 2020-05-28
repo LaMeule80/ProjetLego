@@ -1,9 +1,11 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using LegoAPI;
 using LegoAPI.Json;
 using LegoAPI.Json.Parts;
 using LegoBlazor.API;
+using OutilsBlazor;
 using Xunit;
 
 namespace LegoAPITest
@@ -83,6 +85,19 @@ namespace LegoAPITest
             var result = setApi.LireParts("42064-1", 182);
             Assert.True(result.Count == 182);
             Assert.True(result.Sum(x => x.Quantity) == 1358);
+        }
+
+        [Fact]
+        public void Test()
+        {
+            List<string> items = new List<string>();
+            for (int i = 0; i < 153; i++)
+            {
+                items.Add($"test_{i}");
+            }
+
+            var result = items.SplitList(10);
+            Assert.True(result.Count == 16);
         }
     }
 }
