@@ -1,6 +1,16 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/Hierarchy/Build/SolBuilderDuo/UseMsbuildSolutionBuilder/@EntryValue">NewVersion</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=bb5f367f_002D6d53_002D4497_002Da675_002D0d827da2ee09/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CallApiPartV4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::61AAB630-F189-4E96-9BAB-9E6BE1AA33BA::.NETCoreApp,Version=v3.1::LegoAPITest.SetTestUnitaires.CallApiPartV4&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c2f54cc6_002D3897_002D48ea_002D9c96_002De93140dbb344/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CallApiSet" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::61AAB630-F189-4E96-9BAB-9E6BE1AA33BA::.NETCoreApp,Version=v3.1::LegoAPITest.SetTestUnitaires&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c7b3555c_002Df20e_002D46e5_002D98f6_002D9cd6d60420d5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CallApiPartV3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::61AAB630-F189-4E96-9BAB-9E6BE1AA33BA::.NETCoreApp,Version=v3.1::LegoAPITest.SetTestUnitaires&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;

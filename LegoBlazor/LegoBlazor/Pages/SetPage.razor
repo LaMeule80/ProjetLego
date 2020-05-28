@@ -37,7 +37,7 @@
         </Fields>
     </Column>
     <Column>
-        <img src="@Item.SetImgUrl" />
+        <img src="@Item.SetImgUrl.AbsolutePath" />
     </Column>
 </Row>
 <Row>
@@ -47,7 +47,7 @@
 <Row>
     @foreach (var item in Item.Parts)
     {
-        <Column ColumnSize="ColumnSize.Is4.OnTablet.Is3.OnWidescreen.Is12.OnMobile">
+        <Column ColumnSize="ColumnSize.Is4.OnWidescreen">
             <Card Margin="Margin.Is4.OnY">
                 <CardBody>
                     <CardTitle Size="5">@item.Nom</CardTitle>

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using LegoAPI.Json;
 using LegoAPI.Json.Parts;
 
@@ -18,22 +19,24 @@ namespace LegoAPI
             param.Add(new KeyValuePair<string, object>("min_year", yearMin));
             param.Add(new KeyValuePair<string, object>("max_year", yearMax));
 
-            var result = Get<SetResultJson>(AdresseWithKey, param);
+            var result = Get<SetResultJson>($"{Adresse}/?", param);
 
             return result.Results;
         }
 
         public SetJson LireSet(string number)
         {
-            var adresse = $"{AdresseWithoutKey}{number}/?key={ApiKey}";
+            var adresse = $"{Adresse}/{number}/?";
             var result = Get<SetJson>(adresse);
             return result;
         }
 
-        public List<PartsJson> LireParts(string number)
+        public List<PartsJson> LireParts(string number, long numParts)
         {
-            var adresse = $"{AdresseWithoutKey}{number}/parts/?key={ApiKey}";
-            var result = Get<PartsResultJson>(adresse);
+            List<KeyValuePair<string, object>> param = new List<KeyValuePair<string, object>>();
+            param.Add(new KeyValuePair<string, object>("page_size", numParts));
+            string adresse = $"{Adresse}/{number}/parts/?";
+            var result = Get<PartsResultJson>(adresse, param);
             return result.Results;
         }
 
