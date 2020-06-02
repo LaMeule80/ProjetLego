@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace LegoBlazor.Data
+namespace LegoAPI.Json.Parts
 {
-    public class ThemeJson
+    public class ColorJson
     {
         [JsonProperty("id")]
         public long Id { get; set; }

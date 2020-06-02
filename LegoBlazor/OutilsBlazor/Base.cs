@@ -1,10 +1,14 @@
 ﻿using System;
 using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
 
-namespace LegoBlazor.Tools
+namespace OutilsBlazor
 {
     public class Base : ComponentBase, IDisposable
     {
+        [Inject]
+        protected IJSRuntime JSRuntime { get; set; }
+
         [Inject]
         protected NavigationManager NavigationManager { get; set; }
 

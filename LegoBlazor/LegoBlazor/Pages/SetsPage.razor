@@ -1,0 +1,44 @@
+﻿@page "/sets/{Year:int}"
+@using LegoBlazor.Data
+@inherits LegoBlazor.Modeles.SetsPages
+
+<h1>Sets</h1>
+
+<Row>
+    <DataGrid TItem="Set"
+              Data="@Items"
+              Editable="true"
+              Sortable="true"
+              Filterable="true"
+              ShowPager="true"
+              PageSize="10"
+              UseInternalEditing="true"
+              @bind-SelectedRow="@Item"
+              Striped="true"
+              Bordered="true"
+              Hoverable="true">
+        <ChildContent>
+            <DataGridColumn TItem="Set" Field="@nameof(Set.SetNum)" Caption="Numéro" Sortable="false" />
+            <DataGridColumn TItem="Set" Field="@nameof(Set.Name)" Caption="Name" Sortable="false" />
+            <DataGridColumn TItem="Set" Field="@nameof(Set.Year)" Caption="Année" Sortable="false" />
+            <DataGridColumn TItem="Set" Field="@nameof(Set.SetNum)" Caption="*">
+                <DisplayTemplate>
+                    <Button Color="Color.Primary" Clicked="@(()=>NavClicked())">Voir</Button>
+                </DisplayTemplate>
+            </DataGridColumn>
+        </ChildContent>
+    </DataGrid>
+</Row>
+
+@code {
+
+    [Parameter]
+    public string Filter { get; set; }
+
+    void NavClicked()
+    {
+        if (Item != null)
+            NavigationManager.NavigateTo(Item.Uri, true);
+    }
+
+}

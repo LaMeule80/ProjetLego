@@ -1,0 +1,80 @@
+﻿@page "/produits/{SetNum}"
+@using LegoBlazor.Data
+@using LegoBlazor.Entites
+@using OutilsBlazor;
+@inherits LegoBlazor.Modeles.SetPage
+
+<style>
+    img {
+        width: 20%;
+    }
+</style>
+
+<h1>Set : @Item.Name</h1>
+<Row>
+    <Column>
+        <Fields>
+            <Field>
+                <FieldLabel>
+                    Numéro :
+                </FieldLabel>
+                <FieldBody>
+                    @Item.SetNum
+                </FieldBody>
+                <FieldLabel>
+                    Année :
+                </FieldLabel>
+                <FieldBody>
+                    @Item.Year
+                </FieldBody>
+                <FieldLabel>
+                    Thème :
+                </FieldLabel>
+                <FieldBody>
+                    @Item.Theme
+                </FieldBody>
+            </Field>
+        </Fields>
+    </Column>
+    <Column>
+        <img src="@Item.SetImgUrl.AbsolutePath" />
+    </Column>
+</Row>
+<Row>
+    <Button Color="Color.Primary" Clicked="@(()=>NavClickedToSite())">Voir sur Rebrickable</Button>
+    <Button Color="Color.Info" Clicked="@(()=>VoirLesPieces())">Voir les pièces</Button>
+</Row>
+<Row>
+    @foreach (var item in Item.Parts)
+    {
+        <Column ColumnSize="ColumnSize.Is4.OnWidescreen">
+            <Card Margin="Margin.Is4.OnY">
+                <CardBody>
+                    <CardTitle Size="5">@item.Nom</CardTitle>
+                    <CardImage Source="@item.PartImgUrl.AbsoluteUri" Alt="Placeholder image" />
+                    <CardText>
+                        Quantité : @item.Quantite
+                    </CardText>
+                    <CardText>
+                        Couleur : @item.Couleur
+                    </CardText>
+                </CardBody>
+            </Card>
+        </Column>
+    }
+</Row>
+
+@code {
+
+    public Parts Part;
+
+    void NavClickedToSite()
+    {
+        JSRuntime.AfficherNouvelOnglet(Item.SetUrl.AbsoluteUri);
+    }
+
+    void VoirLesPieces()
+    {
+        JSRuntime.AfficherNouvelOnglet(Item.SetUrl.AbsoluteUri);
+    }
+}

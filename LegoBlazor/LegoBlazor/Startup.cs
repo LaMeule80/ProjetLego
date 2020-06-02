@@ -60,13 +60,6 @@ namespace LegoBlazor
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
-            app.UseStaticFiles(new StaticFileOptions
-            {
-                FileProvider = new PhysicalFileProvider(
-                    Path.Combine(Directory.GetCurrentDirectory(), "Data")),
-                RequestPath = "/Datas"
-            });
-
             app.UseRouting();
 
             app.ApplicationServices
