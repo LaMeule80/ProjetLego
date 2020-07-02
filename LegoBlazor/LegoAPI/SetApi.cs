@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 using LegoAPI.Json;
 using LegoAPI.Json.Parts;
+using OutilsBlazor;
 
 namespace LegoAPI
 {
@@ -40,6 +40,8 @@ namespace LegoAPI
             return result.Results;
         }
 
+        public override string ApiKey => "df134229e22f0dac787fb8ed6973de97";        
+        public override string UrlBase => "https://rebrickable.com/api/v3/lego";
         public override string Uri => "sets";
     }
 }
