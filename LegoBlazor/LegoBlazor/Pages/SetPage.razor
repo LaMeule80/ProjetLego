@@ -36,8 +36,13 @@
             </Field>
         </Fields>
     </Column>
+
     <Column>
-        <img src="@Item.SetImgUrl.AbsolutePath" />
+        <Card Margin="Margin.Is4.OnY">
+            <CardBody>
+                <CardImage Source="@Item.SetImgUrl.AbsoluteUri" Alt="Placeholder image" />
+            </CardBody>
+        </Card>
     </Column>
 </Row>
 <Row>
